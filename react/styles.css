@@ -1,0 +1,109 @@
+.container {
+}
+
+.wrapper {
+}
+
+.footerRow {
+}
+
+.connectRow {
+}
+
+.contactRow {
+}
+
+.contactItem {
+}
+
+.contactLink {
+}
+
+.icon {
+}
+
+.contactText {
+}
+
+.connectItem {
+}
+
+.linkGroupItem {
+}
+
+.itemTitle {
+}
+
+.itemDescription {
+}
+
+.storeLink .icon {
+}
+
+.itemRow {
+}
+
+.socialLink {
+}
+
+.iconLabel {
+}
+
+.storeLink {
+}
+
+.buttonLabel {
+}
+
+.linksRow {
+}
+
+.linkGroupItem {
+}
+
+.copyrightRow {
+}
+
+.copyrightText {
+}
+
+.copyrightLink {
+}
+
+.copyrightLink:hover {
+}
+
+.chatButton {
+}
+
+.modalOverlay {
+}
+
+.modalContainer {
+}
+
+.modalText {
+}
+
+.modalCloseButton {
+}
+
+.wave {
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translate(0, 0) scale(1);
+    background-color: black;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(2.5);
+    background-color: #ec1d24;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+    background-color: black;
+  }
+}

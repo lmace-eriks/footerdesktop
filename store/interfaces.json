@@ -1,0 +1,6 @@
+{
+  "footerdesktop": {
+    "component": "FooterDesktop",
+    "composition": "children"
+  }
+}
