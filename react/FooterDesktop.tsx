@@ -47,7 +47,6 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
     const chatBubble: any = document.querySelector("#cloudlink-chat-overlay-contact-us-button");
     chatBubble?.classList.add(styles.wave);
 
-    // setTimeout(() => { modalRef.current.showModal() }, 250);
     modalRef.current.showModal();
     setTimeout(() => { chatBubble?.classList.remove(styles.wave) }, 500);
   }
@@ -100,16 +99,30 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
       <div className={`${styles.contactRow} ${styles.footerRow}`}>
         <div className={styles.contactItem}>
           <img src={phoneIcon} width={75} height={50} className={styles.icon} />
-          <div className={styles.contactText}>Call Us<br></br>952-351-9148</div>
+          <div className={styles.contactText}>
+            <div className={styles.contactLabel}>
+              Call Us
+            </div>
+            <div className={styles.contactInfo}>
+              952-351-9148
+            </div>
+          </div>
         </div>
         <div className={styles.contactItem}>
           <img src={textIcon} width={75} height={50} className={styles.icon} />
-          <div className={styles.contactText}>Text Us<br></br>952-243-5476</div>
+          <div className={styles.contactText}>
+            <div className={styles.contactLabel}>Text Us</div>
+            <div className={styles.contactInfo}>952-243-5476</div>
+          </div>
         </div>
         <div className={styles.contactItem}>
           <a href="mailto:help@eriksbikeshop.com" className={styles.contactLink}>
             <img src={emailIcon} width={75} height={50} className={styles.icon} />
-            <div className={styles.contactText}>Email Us<br></br>help@eriksbikeshop.com</div>
+            <div className={styles.contactText}>
+              <div className={styles.contactLabel}>Email Us</div>
+              <div className={styles.contactInfo}>help@eriksbikeshop.com
+              </div>
+            </div>
           </a>
         </div>
         <div className={styles.contactItem}>
@@ -124,8 +137,10 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
           <div className={styles.itemTitle}>Help Center</div>
           <div className={styles.itemDescription}>Let our Experts answer all your questions.</div>
           <div className={styles.itemRow}>
-            <img src={brainTrustIcon} width={75} height={50} className={styles.icon} />
-            <div className={styles.iconLabel}>Brain Trust</div>
+            <Link href="/customer-service" className={styles.contactLink}>
+              <img src={brainTrustIcon} width={75} height={50} className={styles.icon} />
+              <div className={styles.iconLabel}>Brain Trust</div>
+            </Link>
           </div>
         </div>
         <div className={styles.connectItem}>
@@ -180,7 +195,7 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
       <div className={`${styles.copyrightRow} ${styles.footerRow}`}>
         <div className={styles.copyrightText}>© {currentYear} ERIK'S Bike Shop Inc. All Rights Reserved. | <Link href="/privacy" className={styles.copyrightLink}>Privacy Policy</Link></div>
       </div>
-      {createPortal(<Modal />, document.body)}
+      {canUseDOM && createPortal(<Modal />, document.body)}
     </footer>
   );
 };
@@ -195,3 +210,4 @@ FooterDesktop.schema = {
 };
 
 export default FooterDesktop;
+
