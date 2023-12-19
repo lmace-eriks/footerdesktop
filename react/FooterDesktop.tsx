@@ -74,9 +74,9 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
     </dialog>
   );
 
-  const NewsletterSignup = () => (
-    <>{children[0]}</>
-  );
+  // const NewsletterSignup = () => (
+  //   <>{children[0]}</>
+  // );
 
   const ShoppingToolsMenu = () => (
     <>{children[1]}</>
@@ -98,7 +98,7 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
     <footer className={styles.container}>
       <div className={`${styles.contactRow} ${styles.footerRow}`}>
         <div className={styles.contactItem}>
-          <img src={phoneIcon} width={75} height={50} className={styles.icon} />
+          <img src={phoneIcon} width={75} height={50} alt="" className={styles.icon} />
           <div className={styles.contactText}>
             <div className={styles.contactLabel}>
               Call Us
@@ -109,7 +109,7 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
           </div>
         </div>
         <div className={styles.contactItem}>
-          <img src={textIcon} width={75} height={50} className={styles.icon} />
+          <img src={textIcon} width={75} height={50} alt="" className={styles.icon} />
           <div className={styles.contactText}>
             <div className={styles.contactLabel}>Text Us</div>
             <div className={styles.contactInfo}>952-243-5476</div>
@@ -117,7 +117,7 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
         </div>
         <div className={styles.contactItem}>
           <a href="mailto:help@eriksbikeshop.com" className={styles.contactLink}>
-            <img src={emailIcon} width={75} height={50} className={styles.icon} />
+            <img src={emailIcon} width={75} height={50} alt="" className={styles.icon} />
             <div className={styles.contactText}>
               <div className={styles.contactLabel}>Email Us</div>
               <div className={styles.contactInfo}>help@eriksbikeshop.com
@@ -127,7 +127,7 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
         </div>
         <div className={styles.contactItem}>
           <button onClick={handleLiveChatClick} className={styles.chatButton}>
-            <img src={chatIcon} width={75} height={50} className={styles.icon} />
+            <img src={chatIcon} width={75} height={50} alt="" className={styles.icon} />
             <div className={styles.contactText}>Live Chat</div>
           </button>
         </div>
@@ -138,7 +138,7 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
           <div className={styles.itemDescription}>Let our Experts answer all your questions.</div>
           <div className={styles.itemRow}>
             <Link href="/customer-service" className={styles.contactLink}>
-              <img src={brainTrustIcon} width={75} height={50} className={styles.icon} />
+              <img src={brainTrustIcon} width={75} height={50} alt="" className={styles.icon} />
               <div className={styles.iconLabel}>Brain Trust</div>
             </Link>
           </div>
@@ -147,7 +147,7 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
           <div className={styles.itemTitle}>Store Locator</div>
           <div className={styles.itemDescription}>Grab your gear today.</div>
           <Link href="/stores" className={styles.storeLink}>
-            <img src={locationIcon} width={50} height={50} className={styles.icon} />
+            <img src={locationIcon} width={50} height={50} alt="" className={styles.icon} />
             <div className={styles.buttonLabel}>Find a Store</div>
           </Link>
         </div>
@@ -155,23 +155,25 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
           <div className={styles.itemTitle}>Connect Socially</div>
           <div className={styles.itemDescription}>See what we're up to.</div>
           <div className={styles.itemRow}>
-            <Link href="https://www.facebook.com/eriksbikeshop/" rel="noreferrer" target="_blank" alt="Facebook Icon." className={styles.socialLink}>
-              <img src={facebookIcon} width={50} height={50} className={styles.icon} />
+            <Link href="https://www.facebook.com/eriksbikeshop/" rel="noreferrer" target="_blank" className={styles.socialLink}>
+              <img src={facebookIcon} width={50} height={50} alt="Facebook Icon." className={styles.icon} />
             </Link>
-            <Link href="https://www.instagram.com/eriksbikeboardski/" rel="noreferrer" target="_blank" alt="Instagram Icon." className={styles.socialLink}>
-              <img src={instagramIcon} width={50} height={50} className={styles.icon} />
+            <Link href="https://www.instagram.com/eriksbikeboardski/" rel="noreferrer" target="_blank" className={styles.socialLink}>
+              <img src={instagramIcon} width={50} height={50} alt="Instagram Icon." className={styles.icon} />
             </Link>
-            <Link href="https://www.linkedin.com/company/erik's-bike-shops/" rel="noreferrer" target="_blank" alt="LinkedIn Icon." className={styles.socialLink}>
-              <img src={linkedinIcon} width={50} height={50} className={styles.icon} />
+            <Link href="https://www.linkedin.com/company/erik's-bike-shops/" rel="noreferrer" target="_blank" className={styles.socialLink}>
+              <img src={linkedinIcon} width={50} height={50} alt="LinkedIn Icon." className={styles.icon} />
             </Link>
-            <Link href="https://www.youtube.com/@EriksBikeandBoardShop" rel="noreferrer" target="_blank" alt="Youtube Icon." className={styles.socialLink}>
-              <img src={youtubeIcon} width={50} height={50} className={styles.icon} />
+            <Link href="https://www.youtube.com/@EriksBikeandBoardShop" rel="noreferrer" target="_blank" className={styles.socialLink}>
+              <img src={youtubeIcon} width={50} height={50} alt="Youtube Icon." className={styles.icon} />
             </Link>
           </div>
         </div>
         <div className={styles.connectItem}>
           <div className={styles.itemTitle}>Email Sign Up</div>
-          <NewsletterSignup />
+          <div className={styles.itemDescription}>Love Gear? Sweet! Join Our Email List!</div>
+          {/* Klaviyo script adds their newsletter signup to this <div> */}
+          <div className="klaviyo-form-UMKxiH" />
         </div>
       </div>
       <div className={`${styles.linksRow} ${styles.footerRow}`}>
