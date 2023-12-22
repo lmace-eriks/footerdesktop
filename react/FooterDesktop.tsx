@@ -23,7 +23,6 @@ interface FooterDesktopProps {
 const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ children }) => {
   const openGate = useRef(true);
   const modalRef = useRef<any>();
-  const klaviyoForm = useRef<HTMLDivElement>(null);
   const [currentYear, setCurrentYear] = useState<number>();
 
   useEffect(() => {
@@ -175,7 +174,7 @@ const FooterDesktop: StorefrontFunctionComponent<FooterDesktopProps> = ({ childr
           <div className={styles.itemDescription}>Love Gear? Sweet! Join Our Email List!</div>
           {/* Klaviyo script adds their newsletter signup to this <div>. 
           If the form does not render the .newsletterLink will display */}
-          <div ref={klaviyoForm} className={`${styles.klaviyoSignupFormDiv} klaviyo-form-UMKxiH`} />
+          <div className={`${styles.klaviyoSignupFormDiv} klaviyo-form-UMKxiH`} />
           <div className={styles.newsletterLink}>
             <Link target="_blank" rel="noreferrer" href="https://manage.kmail-lists.com/subscriptions/subscribe?a=WcUHBh&g=U5wtvJ" className={styles.storeLink}>
               <div className={styles.buttonLabel}>Click Here to Sign Up</div>
